@@ -14,6 +14,14 @@ crap.get('/listUsers',(req, res, next)=>{
 });
 
 crap.post('/addUser', (req, res, next) => {
+    const user = {
+        "user4" : {
+           "name" : "mohit",
+           "password" : "password4",
+           "profession" : "teacher",
+           "id": 4
+        }
+     }
 
     fs.readFile('./users.json',(err, data) => {
         if(err) throw err;
