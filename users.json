@@ -1,4 +1,4 @@
-const users = {
+{
     "user1" : {
        "name" : "mahesh",
        "password" : "password1",

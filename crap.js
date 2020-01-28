@@ -13,4 +13,16 @@ crap.get('/listUsers',(req, res, next)=>{
     })
 });
 
+crap.post('/addUser', (req, res, next) => {
+
+    fs.readFile('./users.json',(err, data) => {
+        if(err) throw err;
+        data = JSON.parse(data);
+        data["user4"] = user["user4"];
+        console.log(data);
+        res.end(data);
+        console.log('working till here')
+    });
+});
+
 crap.listen(3001);
