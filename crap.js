@@ -8,8 +8,9 @@ crap.get('/listUsers',(req, res, next)=>{
         if(err) throw err;
         const dataBuffer = data;
         const dataJSON = dataBuffer.toString()
-        res.send(dataJSON);
+        res.end(dataJSON); // send the json to browser use res.end
+        console.log('data sent to browser')
     })
 });
 
-crap.listen(3000);
+crap.listen(3001);
